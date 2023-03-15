@@ -1,4 +1,4 @@
-#Steps to run this application
+# Steps to run this application
 
 1) Clone the repository
 
@@ -10,7 +10,7 @@
 
 
  
-#How it works?
+# How it works?
 1) After running this application, you will be directed to the browser and will see your application running on the local host.
 
 2) You will see a list of products on the Home page.
@@ -33,13 +33,12 @@
 # Challenges 
 The main challenge was to  make this shopping cart user-friendly, I was getting confused on different designs and colors.
 
-#How I overcome this challenge ?
+# How I overcome this challenge ?
 I searched for different ecommerce websites and after research I have decided to follow this design.
 
 
 
 # Note: 
   - Make sure that Node.js is already installed in your machine.
-  
-   -Make sure that you are running all these commands in the directory where you have cloned the code.
+  -Make sure that you are running all these commands in the directory where you have cloned the code.
 
