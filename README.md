@@ -6,7 +6,7 @@
      -NPM install
 
 3) Run this command in terminal to start application 
-     -NPM start
+      -NPM start
 
 
  
