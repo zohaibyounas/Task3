@@ -39,6 +39,6 @@ I searched for different ecommerce websites and after research I have decided to
 
 
 # Note: 
-  - Make sure that Node.js is already installed in your machine.
-  -Make sure that you are running all these commands in the directory where you have cloned the code.
+     - Make sure that Node.js is already installed in your machine.
+     -Make sure that you are running all these commands in the directory where you have cloned the code.
 
