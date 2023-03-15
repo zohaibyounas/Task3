@@ -108,7 +108,7 @@ const Cart = () => {
                               <div className="flex">
                                 <button
                                   type="button"
-                                  className="font-medium text-[#4ADE80] hover:scale-125 duration-500 "
+                                  className="font-medium text-red-700 hover:scale-125 duration-500 "
                                   onClick={() =>
                                     dispatch({
                                       type: "REMOVE",
