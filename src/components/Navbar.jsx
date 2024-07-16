@@ -13,7 +13,7 @@ const Navbar = () => {
     <div className="w-full min-h-[70px] bg-emerald-100 z-10 ">
       <div className="flex justify-between px-10">
         <div className="py-5 text-xl font-semibold md:text-3xl">
-          <Link to="/">Studoyo App</Link>
+          <Link to="/">My Store</Link>
         </div>
 
         <div className="py-6">

@@ -21,13 +21,20 @@
 
 5) Click on shopping cart icon, you will be redirected to cart page where you will see a list of product added to your cart.
 
-6) On the cart page with every item, you can see a delete icon, and increment (+) and decrement (+) signs.
+6) On the cart page with every item, you can see a delete icon, and increment (+) and decrement (-) signs.
     - clicking on delete will remove your product from shopping cart
     - clicking on + sign will increment the quantity 
     - clicking on - will decrease the quantity
     
 7) On every increment and decrement, the number of quantity and price get updated.
 
+8) Click on addproduct button yo can add the product product name price and image
+
+9) lick on cheeckout button you can see all product which you added to card and it show total bill and also show how quantity of product.
+
+10)  it have a search box in which you can search a diffrent product
+
+11) we can also filter product in their high and low price
 
 
 # Challenges 
