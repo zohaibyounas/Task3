@@ -3,10 +3,10 @@
 1) Clone the repository
 
 2) Install all dependencies  
-     -NPM install
+     - NPM install
 
 3) Run this command in terminal to start application 
-      -NPM start
+      - NPM start
 
 
  
@@ -31,14 +31,13 @@
 
 
 # Challenges 
-The main challenge was to  make this shopping cart user-friendly, I was getting confused on different designs and colors.
+The main challenge was to make this shopping cart user-friendly. I was getting confused with different designs and colors.
 
-# How I overcome this challenge ?
-I searched for different ecommerce websites and after research I have decided to follow this design.
+# How I overcame this challenge ?
+I searched for different ecommerce websites and after research I decided to follow this design.
 
 
 
 # Note: 
-     - Make sure that Node.js is already installed in your machine.
-     -Make sure that you are running all these commands in the directory where you have cloned the code.
-
+- Make sure that Node.js is already installed in your machine.
+- Make sure that you are running all these commands in the directory where you have cloned the code.
