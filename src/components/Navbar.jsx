@@ -1,4 +1,4 @@
-// src/components/Navbar.js
+
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
