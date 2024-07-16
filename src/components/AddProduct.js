@@ -1,4 +1,3 @@
-// src/components/AddProduct.js
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/Context";
@@ -17,7 +16,7 @@ const AddProduct = () => {
     e.preventDefault();
 
     const newProduct = {
-      id: Globalstate.state.length + 1, // Assuming the ID is sequential
+      id: Globalstate.state.length + 1, 
       title,
       price: parseFloat(price),
       image,
@@ -37,12 +36,15 @@ const AddProduct = () => {
       theme: "light",
     });
 
-    navigate("/"); // Redirect to the homepage after adding the product
+    navigate("/"); 
   };
 
   return (
     <div className="flex items-center justify-center h-screen bg-emerald-50">
-      <form className="bg-white p-6 rounded shadow-md w-96" onSubmit={handleAddProduct}>
+      <form
+        className="bg-white p-6 rounded shadow-md w-96"
+        onSubmit={handleAddProduct}
+      >
         <h2 className="text-2xl font-bold mb-4">Add New Product</h2>
         <div className="mb-4">
           <label className="block text-gray-700">Title</label>

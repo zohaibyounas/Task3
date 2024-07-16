@@ -1,4 +1,3 @@
-// src/components/Cart.js
 import EmptyCart from "../components/EmptyCart";
 import { BsArrowLeft } from "react-icons/bs";
 import { useContext } from "react";
@@ -45,7 +44,7 @@ const Cart = () => {
                 </h2>
               </div>
 
-              {/* cart items */}
+              
               <div className="mt-3 h-96 pr-5 scrollbar-thin scrollbar-thumb-[#4ADE80] scrollbar-track-whitex overflow-y-scroll scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
                 <div className="flow-root">
                   <ul className="-my-6 divide-y divide-green-600">
@@ -66,7 +65,8 @@ const Cart = () => {
                                 {cartItem.title}
                               </h3>
                               <p className="ml-4">
-                                ${(cartItem.price * cartItem.quantity).toFixed(
+                                $
+                                {(cartItem.price * cartItem.quantity).toFixed(
                                   2
                                 )}
                               </p>

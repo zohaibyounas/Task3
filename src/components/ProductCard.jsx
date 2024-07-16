@@ -90,9 +90,7 @@ const ProductCard = () => {
                     </h1>
                   </div>
                   <div>
-                    <p className="mt-2 text-xl sm:text-2xl">
-                      ${product.price}
-                    </p>
+                    <p className="mt-2 text-xl sm:text-2xl">${product.price}</p>
                   </div>
                   <div className="mt-5">
                     <button

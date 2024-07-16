@@ -1,4 +1,3 @@
-// src/components/Checkout.js
 import { useContext } from "react";
 import { CartContext } from "../context/Context";
 
@@ -14,7 +13,9 @@ const Checkout = () => {
     <div className="flex justify-center font-light">
       <div className="flex flex-col w-full px-6 sm:px-52 absolute bg-white">
         <div className="py-6">
-          <h2 className="text-2xl font-medium text-gray-900">Checkout Summary</h2>
+          <h2 className="text-2xl font-medium text-gray-900">
+            Checkout Summary
+          </h2>
         </div>
         <div className="flow-root">
           <ul className="-my-6 divide-y divide-green-600">
@@ -37,7 +38,9 @@ const Checkout = () => {
                     </div>
                   </div>
                   <div className="flex flex-1 items-end justify-between text-sm">
-                    <p className="text-lg font-serif">Quantity: {item.quantity}</p>
+                    <p className="text-lg font-serif">
+                      Quantity: {item.quantity}
+                    </p>
                   </div>
                 </div>
               </li>
