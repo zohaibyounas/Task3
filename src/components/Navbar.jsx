@@ -1,12 +1,13 @@
+// src/components/Navbar.js
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { CartContext } from "../context/Context";
 
 const Navbar = () => {
   const Globalstate = useContext(CartContext);
-
   const state = Globalstate.state;
+  const navigate = useNavigate();
 
   return (
     <div className="w-full min-h-[70px] bg-emerald-100 z-10 ">
@@ -23,8 +24,17 @@ const Navbar = () => {
                 {state.length}
               </span>
             </span>
-            <HiOutlineShoppingBag className="text-3xl " />
+            <HiOutlineShoppingBag className="text-3xl  " />
           </Link>
+        </div>
+
+        <div className="py-6">
+          <button
+            onClick={() => navigate("/add-product")}
+            className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300"
+          >
+            Add Product
+          </button>
         </div>
       </div>
     </div>

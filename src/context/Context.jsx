@@ -38,7 +38,8 @@ export function Context(props) {
           }
         });
         return decreementItem;
-
+        case "ADD":
+          return [...state, action.payload];
       default:
         return state;
     }

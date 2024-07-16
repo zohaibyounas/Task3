@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { useContext } from "react";
+import { useState, useContext, useMemo } from "react";
 import { CartContext } from "../context/Context";
 import { toast } from "react-toastify";
 import Spinner from "./Spinner";
@@ -10,18 +10,68 @@ const ProductCard = () => {
   );
 
   const Globalstate = useContext(CartContext);
-
   const dispatch = Globalstate.dispatch;
-  console.log(Globalstate);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sortOption, setSortOption] = useState("default");
+
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSort = (event) => {
+    setSortOption(event.target.value);
+  };
+
+  const filteredAndSortedProducts = useMemo(() => {
+    if (!data) return [];
+
+    let filteredProducts = data.filter((product) =>
+      product.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
+    if (sortOption === "price-asc") {
+      filteredProducts.sort((a, b) => a.price - b.price);
+    } else if (sortOption === "price-desc") {
+      filteredProducts.sort((a, b) => b.price - a.price);
+    } else if (sortOption === "name-asc") {
+      filteredProducts.sort((a, b) => a.title.localeCompare(b.title));
+    } else if (sortOption === "name-desc") {
+      filteredProducts.sort((a, b) => b.title.localeCompare(a.title));
+    }
+
+    return filteredProducts;
+  }, [data, searchQuery, sortOption]);
+
   return (
     <div>
+      <div className="flex justify-between mb-4 p-4">
+        <input
+          type="text"
+          placeholder="Search products..."
+          value={searchQuery}
+          onChange={handleSearch}
+          className="border p-2 rounded-lg w-full md:w-1/3"
+        />
+        <select
+          onChange={handleSort}
+          value={sortOption}
+          className="border p-2 rounded-lg ml-4"
+        >
+          <option value="default">Sort by</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name-asc">Name: A to Z</option>
+          <option value="name-desc">Name: Z to A</option>
+        </select>
+      </div>
+
       {isLoading ? (
         <div className="flex h-screen items-center justify-center">
           <Spinner />
         </div>
       ) : (
-        <div className="flex items-center flex-wrap w-[100%] ">
-          {data.map((product, index) => {
+        <div className="flex items-center flex-wrap w-[100%]">
+          {filteredAndSortedProducts.map((product, index) => {
             product.quantity = 1;
             return (
               <div
@@ -33,14 +83,14 @@ const ProductCard = () => {
                   src={product.image}
                   alt="product"
                 />
-                <div className="flex-col justify-between items-center  ">
+                <div className="flex-col justify-between items-center">
                   <div>
                     <h1 className="mt-5 text-xs font-semibold sm:text-2xl truncate">
                       {product.title}
                     </h1>
                   </div>
                   <div>
-                    <p className="mt-2  text-xl sm:text-2xl">
+                    <p className="mt-2 text-xl sm:text-2xl">
                       ${product.price}
                     </p>
                   </div>
